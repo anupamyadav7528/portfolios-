@@ -11,10 +11,10 @@
 
 :root {
     --primary-color: #1a212d;
-    --secondary-color: #172a45;
-    --text-light: #ccd6f6;
+    --secondary-color: #14b0cb;
+    --text-light: #1b4df2;
     --text-dark: #8892b0;
-    --accent-color: #64ffda;
+    --accent-color: hsl(199, 100%, 70%);
 }
 
 body {
@@ -287,6 +287,8 @@ footer {
         width: 200px;
         height: 200px;
     }
+    
+}
     footer {
   background-color: #06014a;
   color: #fff;
