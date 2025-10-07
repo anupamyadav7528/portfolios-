@@ -11,7 +11,7 @@
 
 :root {
     --primary-color: #1a212d;
-    --secondary-color: #14b0cb;
+    --secondary-color: #f1e7f1;
     --text-light: #1b4df2;
     --text-dark: #8892b0;
     --accent-color: hsl(199, 100%, 70%);
@@ -23,17 +23,51 @@ body {
     color: var(--text-light);
     line-height: 1.6;
 }
+header {
+    background: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--header-text-color);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
 
 /* Header & Nav */
-header {
-    position: fixed;
-    width: 100%;
+.container{
+    background: var(--primary-color);
+    position: sticky;
     top: 0;
-    left: 0;
     z-index: 100;
-    background-color: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
-    transition: top 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 nav {
@@ -70,6 +104,58 @@ nav {
 .nav-links a:hover {
     color: var(--accent-color);
 }
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container.left { left: 0; }
+.timeline-container.right { left: 50%; }
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12.5px;
+    background-color: var(--accent-color);
+    border: 4px solid var(--header-text-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-container.right::after { left: -12.5px; }
+
+.content {
+    padding: 20px 30px;
+    background-color: var(--primary-color);
+    position: relative;
+    border-radius: 6px;
+}
+
+.content h3 { color: var(--accent-color); }
+.content h4 { font-weight: 400; font-style: italic; margin-bottom: 0.5rem; }
+
 
 /* Sections General Styling */
 section {
@@ -297,4 +383,3 @@ footer {
   font-family: Arial, sans-serif;
 }
 
-}
