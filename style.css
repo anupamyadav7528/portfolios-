@@ -266,7 +266,7 @@ h2::after {
     margin-bottom: 0.5rem;
 }
 
-/* Projects Section */
+ /*Projects Section 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -277,19 +277,24 @@ h2::after {
     background: var(--secondary-color);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
+    transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
     display: flex;
     flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(+50px);
 }
 
 .project-card img {
     width: 100%;
     height: auto;
 }
+
 
 .project-card h3 {
     font-size: 1.5rem;
@@ -326,8 +331,121 @@ h2::after {
     color: var(--accent-color);
     text-decoration: none;
     margin-right: 1rem;
+}*/
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00bfff;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
+.projects-container {
+  display: flex;
+  flex-direction: row;     
+  justify-content: center; 
+  align-items: flex-start;  
+  gap: 40px;
+  flex-wrap: wrap;         
+  width: 100%;
+  max-width: 900px;        
+  margin: auto;
+  padding: 20px;
+}
+
+/* Card Styles */
+.project-card {
+  width: 400px;
+  height: 230px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Front Side */
+.card-front {
+  background: linear-gradient(145deg, #ece3e3, hwb(0 91% 5%));
+  border: 1px solid #600bea;
+}
+
+.card-front h2 {
+  color: #00bfff;
+  margin: 5px 0;
+}
+
+.card-front p {
+  font-size: 0.9rem;
+  color: #857979;
+}
+
+.tags {
+  margin-top: 15px;
+}
+
+.tags span {
+  background: #00bfff;
+  color: #000;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+}
+
+/* Back Side */
+.card-back {
+  background: linear-gradient(145deg, #00bfff, #0077ff);
+  color: #000;
+  text-align: center;
+  transform: rotateY(180deg);
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.preview-btn {
+  background: #fff;
+  color: #0077ff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.preview-btn:hover {
+  background: #0077ff;
+  color: #fff;
+  box-shadow: 0 0 15px #fff;
+}
 /* Contact Section */
 #contact {
     text-align: center;
