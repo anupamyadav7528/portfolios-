@@ -1,209 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anupam Yadav | portfolio website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Anupam Yadav — Portfolio</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <link rel="stylesheet" href="style.css">
-    
+    <!-- devicon icons CDN for skill icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Anupam</a>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Journey</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <div class="wrap">
+
+        <!-- LEFT SIDEBAR (fixed) -->
+        <aside class="sidebar" id="sidebar">
+            <div class="avatar-wrap" id="avatarWrap">
+                <img src="myphoto.png" alt="Profile" id="avatarImg" class="avatar">
+            </div>
+            <div class="name">Anupam Yadav</div>
+            <div class="role">Fullstack Developer • B.Tech (CSE)</div>
+
+            <div class="sidebar-info">
+                <div class="info"><span>Location</span><strong>Jaunpur,Uttar Pradesh, India</strong></div>
+                <div class="info"><span>Email</span><strong>anupamyadav681209652710@gmail.com</strong></div>
+                <div class="info"><span>Degree</span><strong>B.Tech (CSE)</strong></div>
+            </div>
+
+            <div class="sidebar-actions">
+                <a href="Anupam_Yadav_Resume(1).pdf" class="btn primary" download>Download CV</a>
+                <button class="btn outline" id="themeToggle" aria-pressed="false">Toggle Theme</button>
+            </div>
+
+            <div class="socials">
+
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- RIGHT CONTENT -->
+        <main class="main">
+
+            <!-- NAV (top right small) -->
+            <nav class="topnav">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#journey">Journey</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </div>
-    </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Anupam Yadav</h1>
-                <p>Aspiring Full Stack Developer</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="Anupam_Yadav_Resume(1).pdf" target="_blank" class="btn btn-secondary">Download CV</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-container">
-                <img src="myphoto.png" alt="Anupam Yadav" class="profile-pic">
-                <div class="about-text">
-                    <p>
-                        I am a passionate and dedicated B.Tech Computer Science student from <strong>Prasad Institute of Technology (AKTU)</strong>. As an aspiring Full Stack Developer, I have a strong foundation in both front-end and back-end technologies.
-                    </p>
-                    <p>
-                        I enjoy solving complex problems and turning ideas into beautiful, functional web applications. I am constantly learning new technologies and striving to improve my skills to build efficient and scalable digital solutions.
-                    </p>
-                </div>
-            </div>
-         </section>
-         <!  <section id="education" class="container fade-in">
-            <h2 class="section-title">My Journey</h2>
-            <div class="timeline">
-                <div class="timeline-container right">
-                    <div class="content">
-                        <h3>B.Tech, Computer Science</h3>
-                        <h4>2023 - 2027</h4>
-                        <p>Prasad Institute of Technology, Jaunpur (Dr. A.P.J. Abdul Kalam Technical University)</p>
+            <!-- HOME -->
+            <section id="home" class="section hero">
+                <div class="hero-left">
+                    <h1>Hi, I’m <span class="accent">Anupam</span></h1>
+                    <h3 id="typed" class="typed" aria-live="polite"></h3>
+                    <p class="lead">I am a passionate and dedicated B.Tech Computer Science student from <strong>Prasad Institute of Technology (AKTU)</strong>. As an aspiring Full Stack Developer, I have a strong foundation in both front-end and back-end technologies.</p>
+                    <div class="cta">
+                        <a href="#projects" class="btn primary">See Projects</a>
+                        <a href="#contact" class="btn outline">Contact</a>
                     </div>
                 </div>
-                <div class="timeline-container left">
-                    <div class="content">
-                        <h3>Intermediate (12th Grade)</h3>
-                        <h4>2022 - 2023</h4>
-                        <p>Sitaram Inter College</p>
+
+                <div class="hero-right" id="heroParallax">
+                    <div class="feature-card">
+                        <img src="chatbot.png" alt="Featured">
+                        <div class="feature-body">
+                            <div class="feat-title">chatbot</div>
+                            <div class="feat-desc">ai-study-chatbot.</div>
+                            <div class="feat-actions">
+                                <button class="btn mini open-project" data-project='{"title":"chatbot","desc":"ai-study-chatbot, cart and responsive UI.","img":"chatbot.png photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=60","live":"https://ai-study-chatbot.netlify.app/","code":"https://github.com/anupamyadav7528/ai-chatbot"}'>Open</button>
+                                <a href="https://ai-study-chatbot.netlify.app/" class="link">Live</a>
+                                <a href="https://github.com/anupamyadav7528/ai-chatbot" class="link">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating" id="float1"></div>
+                    <div class="floating small" id="float2"></div>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section id="skills" class="section">
+                <h2 class="section-title">My Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="devicon-html5-plain colored"></i></div>
+                        <div class="skill-title">HTML5</div>
+                        <div class="skill-bar"><i data-value="95%"></i></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="devicon-css3-plain colored"></i></div>
+                        <div class="skill-title">CSS3</div>
+                        <div class="skill-bar"><i data-value="92%"></i></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="devicon-javascript-plain colored"></i></div>
+                        <div class="skill-title">JavaScript</div>
+                        <div class="skill-bar"><i data-value="88%"></i></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="devicon-git-plain colored"></i></div>
+                        <div class="skill-title">Git & GitHub</div>
+                        <div class="skill-bar"><i data-value="85%"></i></div>
                     </div>
                 </div>
-                 <div class="timeline-container right">
-                    <div class="content">
-                        <h3>High School (10th Grade)</h3>
-                        <h4>2020 - 2021</h4>
-                        <p>Kisan Inter College</p>
+            </section>
+
+            <!-- JOURNEY (timeline) -->
+            <section id="journey" class="section">
+                <h2 class="section-title">My Journey</h2>
+
+                <div class="timeline-wrap">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <div class="timeline-content">
+                            <h3>B.Tech — Computer Science</h3>
+                            <span class="muted">2023 - 2027</span>
+                            <p>Prasad Institute of Technology, Jaunpur (AKTU)</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <div class="timeline-content">
+                            <h3>Intermediate (12th)</h3>
+                            <span class="muted">2022 - 2023</span>
+                            <p>Sita Ram Inter College</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <div class="timeline-content">
+                            <h3>High School (10th)</h3>
+                            <span class="muted">2020 - 2021</span>
+                            <p>Sita Ram Inter College</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="skills">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fab fa-html5"></i><p>HTML5</p></div>
-                <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
-                <div class="skill-card"><i class="fab fa-js-square"></i><p>JavaScript </p></div>
-               <!-- <div class="skill-card"><i class="fab fa-react"></i><p>React</p></div>
-                <div class="skill-card"><i class="fab fa-node-js"></i><p>Node.js</p></div>
-                <div class="skill-card"><i class="fas fa-database"></i><p>MongoDB</p></div>
-                <div class="skill-card"><i class="fas fa-database"></i><p>MySQL</p></div>-->
-                <div class="skill-card"><i class="fab fa-git-alt"></i><p>Git & GitHub</p></div>
-            </div>
-         </section>
-        <!--
-         <section id="projects">
-            <h2>My Project</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="#" alt="Project 1">
-                    <h3>My Portfolio web</h3>
-                    <p>A brief description of the project. Explain the problem it solves and its main features. This is where you shine!</p>
-                    <div class="project-tech">
-                        <span>html</span>
-                        <span>css</span>
-                        <span>js</span>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="projects" id="projects">
+                <h2 class="section-title">My Projects</h2>
+
+                <div class="projects-container">
+
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Project 1</h3>
+                                <h2>My Portfolio</h2>
+                                <p>
+                                    A brief description of the project. Explain the problem it solves and its main features. This is where you shine!
+                                </p>
+                                <div class="tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+
+                                <h2>Preview Project</h2>
+                                <a href="#" class="preview-btn">Open Preview</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">Source Code</a>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Project 2</h3>
+                                <h2>in working</h2>
+                                <p>
+                                    A brief description of the project. Explain the problem it solves and its main features. This is where you shine!
+                                </p>
+                                <div class="tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+                                <h2>Preview Project</h2>
+                                <a href="#" class="preview-btn">Open Preview</a>
+                            </div>
+                        </div>
                     </div>
-                    
-                    
+
                 </div>
+            </section>
 
-                <div class="project-card">
-                    <img src="">
-                    <h3>Project Title 2</h3>
-                    <p>A brief description of the project. Explain the problem it solves and its main features. This is where you shine!</p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">Source Code</a>
+            <!-- CONTACT -->
+            <!-- ==== CONTACT SECTION ==== -->
+            <section id="contact" class="section">
+                <h2 class="section-title"><span>📩</span> Contact Me</h2>
+
+                <div class="contact-box">
+                    <p><i class="fa-solid fa-envelope"></i>anupamyadav681209652710@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7800616270</p>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/anupamyadav7528" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/anupamyadav7528?igsh=MWxzYTN3cW10eHNkOA==" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/anupam-yadav-2a6a1130b" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
                     </div>
                 </div>
-                
-                </div>
-         </section>-->
-         <section class="projects" id="projects">
-    <h2 class="section-title">My Projects</h2>
+            </section>
 
-    <div class="projects-container">
 
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <h3>Project 1</h3>
-            <h2>My Portfolio</h2>
-            <p>
-              A brief description of the project. Explain the problem it solves and
-              its main features. This is where you shine!
-            </p>
-            <div class="tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-            </div>
-          </div>
+            <footer class="footer muted">© <span id="year"></span> Anupam Yadav </footer>
 
-          <div class="card-back">
-            <h2>Preview Project</h2>
-            <a href="#" class="preview-btn">Open Preview</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <h3>Project 2</h3>
-            <h2>in working</h2>
-            <p>
-              A brief description of the project. Explain the problem it solves and
-              its main features. This is where you shine!
-            </p>
-            <div class="tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-          </div>
-
-          <div class="card-back">
-            <h2>Preview Project</h2>
-            <a href="#" class="preview-btn">Open Preview</a>
-          </div>
-        </div>
-      </div>
-
+        </main>
     </div>
-  </section>
-         <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm currently looking for new opportunities. My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-            <a href="https://www.gmail.com/in/.anupamyadav681209652710@gmail.com" class="btn">Say Hello</a>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/anupam-yadav-2a6a1130b" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/anupamyadav7528 git hub" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/anupam_yadav" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/anupamyadav7528?igsh=MWxzYTN3cW10eHNkOA==" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-         </section>
-    </main>
-    <footer>
-        <p> Designed & Built by @Anupam Yadav</p>
-    </footer>
-    <!-- Font Awesome CDN (Add in <head> of your HTML) -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
 
-    <script src="portpolio.js"></script>
+    <!-- Project Modal (3D flip feel) -->
+    <div id="projectModal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-card" id="modalCard" role="document" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+            <div class="modal-face modal-front" id="modalFront">
+                <img id="modalImg" src="" alt="">
+                <div class="modal-content">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDesc"></p>
+                    <div class="modal-links">
+                        <a id="modalLive" class="btn mini" href="#" target="_blank">Live</a>
+                        <a id="modalCode" class="btn outline mini" href="#" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-face modal-back" id="modalBack">
+                <div class="modal-content">
+                    <h3>Technologies</h3>
+                    <ul id="modalTech" class="muted">
+                        <li>HTML, CSS, JS</li>
+                        <li>Responsive UI</li>
+                        <li>Animations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
