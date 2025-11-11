@@ -1,12 +1,12 @@
 :root {
-    --bg1: oklab(82.257% -0.06166 0.10139);
-    --bg2: #53c6b3;
-    --glass: rgba(40, 185, 151, 0.04);
-    --muted: rgba(18, 4, 65, 0.75);
-    --accent1: #cdf8f1;
-    --accent2: #c3ffdc;
+    --bg1: #071427;
+    --bg2: #07263a;
+    --glass: rgba(255, 255, 255, 0.04);
+    --muted: rgba(255, 255, 255, 0.75);
+    --accent1: #10b981;
+    --accent2: #0ea5e9;
     --radius: 14px;
-    --card-bg: linear-gradient(180deg, rgba(122, 37, 207, 0.02), rgba(159, 106, 140, 0.623));
+    --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
 }
 
 * {
