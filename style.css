@@ -4,7 +4,7 @@
     --glass: rgba(255, 255, 255, 0.04);
     --muted: rgba(255, 255, 255, 0.75);
     --accent1: #10b981;
-    --accent2: #0ea5e9;
+    --accent2: #0c90ce;
     --radius: 14px;
     --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
 }
@@ -20,7 +20,7 @@ html,
 body {
     height: 100%;
     background: linear-gradient(135deg, var(--bg1), var(--bg2));
-    color: hsla(198, 29%, 43%, 0.776);
+    color: hsla(197, 34%, 34%, 0.776);
     -webkit-font-smoothing: antialiased
 }
 
@@ -549,7 +549,7 @@ h3 {
 .modal-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(2, 6, 23, 0.6);
+    background: rgba(12, 44, 189, 0.6);
     backdrop-filter: blur(2px)
 }
 
@@ -565,7 +565,7 @@ h3 {
     position: absolute;
     inset: 0;
     border-radius: 12px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    background: linear-gradient(180deg, rgba(176, 9, 9, 0.02), transparent);
     border: 1px solid rgba(255, 255, 255, 0.06);
     overflow: auto;
     padding: 16px;
